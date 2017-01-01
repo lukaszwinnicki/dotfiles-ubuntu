@@ -1,0 +1,8 @@
+# Create a new directory and enter it
+function mkd() {
+    mkdir -p "$@" && cd "$_";
+}
+
+function docker_kill() {
+    docker rm -f -v $(docker ps -a | grep "$@" | awk '{print $1}')
+}
