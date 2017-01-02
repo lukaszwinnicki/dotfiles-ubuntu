@@ -1,6 +1,6 @@
 ###### Variables
 
-dir=~/dotfiles                    # dotfiles directory
+dir=~/dotfiles-ubuntu                    # dotfiles directory
 files=".bash_profile .vimrc .aliases .functions .paths .exports .tmux.conf .zshrc z.sh"
 
 ##########
@@ -13,7 +13,7 @@ echo "...done"
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
 for file in $files; do
     echo "Creating symlink to $file in home directory."
-    ln -s $dir/$file ~/$file
+    ln -s -f $dir/$file ~/$file
 done
 
 source ~/.bash_profile
