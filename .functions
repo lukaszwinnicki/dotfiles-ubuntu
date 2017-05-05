@@ -40,3 +40,10 @@ function fcall() {
   subject=$(ls -a | fzf +m)
   eval "$@ $subject"
 }
+
+// docker exec from running containers
+function fdoex() {
+    local container_name
+    container_name=$(docker ps --format {{.Names}} | fzf)
+    docker exec -ti "$container_name" bash
+}
