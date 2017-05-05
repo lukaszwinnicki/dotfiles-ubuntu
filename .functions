@@ -23,7 +23,7 @@ function fkill() {
 
 function fd() {
   local dir
-  dir=$(find ${1:-.} -maxdepth 1 -mindepth 1 -type d | fzf +m)
+  dir=$(find ${1:-.} -maxdepth 1 -mindepth 1 -type d | fzf)
   cd "$dir"
 }
 
@@ -31,7 +31,7 @@ function fd() {
 function fdd() {
   local dir
   dir=$(find ${1:-.} -path '*/\.*' -prune \
-                  -o -type d -print 2> /dev/null | fzf +m) &&
+                  -o -type d -print 2> /dev/null | fzf) &&
   cd "$dir"
 }
 
