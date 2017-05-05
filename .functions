@@ -23,7 +23,7 @@ function fkill() {
 
 function fd() {
   local dir
-  dir=$(find ${1:-.} -type d -maxdepth 1 -mindepth 1 | fzf +m)
+  dir=$(find ${1:-.} -maxdepth 1 -mindepth 1 -type d | fzf +m)
   cd "$dir"
 }
 
