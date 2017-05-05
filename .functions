@@ -6,3 +6,37 @@ function mkd() {
 function docker_kill() {
     docker rm -f -v $(docker ps -a | grep "$@" | awk '{print $1}')
 }
+
+function fh() {
+  print -z $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed 's/ *[0-9]* *//')
+}
+
+function fkill() {
+  local pid
+  pid=$(ps -ef | sed 1d | fzf -m | awk '{print $2}')
+
+  if [ "x$pid" != "x" ]
+  then
+    echo $pid | xargs kill -${1:-9}
+  fi
+}
+
+function fd() {
+  local dir
+  dir=$(find ${1:-.} -type d -maxdepth 1 -mindepth 1 | fzf +m)
+  cd "$dir"
+}
+
+# fdd - cd to selected directory
+function fdd() {
+  local dir
+  dir=$(find ${1:-.} -path '*/\.*' -prune \
+                  -o -type d -print 2> /dev/null | fzf +m) &&
+  cd "$dir"
+}
+
+function fcall() {
+  local subject
+  subject=$(ls -a | fzf +m)
+  eval "$@ $subject"
+}
