@@ -43,3 +43,14 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 # Clipboard managing
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
+
+# GIT
+alias gcd="git checkout develop"
+alias gcm="git checkout master"
+alias gflfs="git flow feature start"
+alias gflff="git flow feature finish"
+alias gflrs="git flow release start"
+alias gflrf="git flow release finish"
+alias gp="git pull"
+alias glog="git log --all --graph --oneline --decorate"
+alias gpusht="git push; git push origin --tags"
