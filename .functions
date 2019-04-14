@@ -52,3 +52,9 @@ function fdoex() {
 function fdokill() {
     docker rm -f -v $(docker ps -a --format {{.Names}} | fzf -m )
 }
+
+function fmake() {
+    local subject
+    subject=$(egrep '^[a-zA-Z\-]+:{1}' Makefile | cut -d ':' -f 1 | fzf)
+    make "$subject"
+}
