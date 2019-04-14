@@ -55,6 +55,6 @@ function fdokill() {
 
 function fmake() {
     local subject
-    subject=$(egrep '^[a-zA-Z\-]+:{1}' Makefile | cut -d ':' -f 1 | fzf)
+    subject=$(egrep '^[a-zA-Z0-9_\-]+:{1}' Makefile | cut -d ':' -f 1 | fzf)
     make "$subject"
 }
