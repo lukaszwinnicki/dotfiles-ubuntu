@@ -1,0 +1,12 @@
+set hlsearch
+
+set cursorline
+
+set surround
+
+set multiple-cursors
+
+set incsearch
+
+" jk is escape
+inoremap jk <esc>
