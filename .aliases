@@ -54,3 +54,5 @@ alias gflrf="git flow release finish"
 alias gp="git pull"
 alias glog="git log --all --graph --oneline --decorate"
 alias gpusht="git push; git push origin --tags"
+
+alias lg="lazygit"
