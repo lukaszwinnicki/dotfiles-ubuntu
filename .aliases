@@ -56,3 +56,9 @@ alias glog="git log --all --graph --oneline --decorate"
 alias gpusht="git push; git push origin --tags"
 
 alias lg="lazygit"
+
+# docker
+alias docker-compose="docker compose"
+
+
+alias t="tasks"
