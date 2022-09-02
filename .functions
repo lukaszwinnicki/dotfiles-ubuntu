@@ -48,6 +48,13 @@ function fdoex() {
     docker exec -ti "$container_name" bash
 }
 
+#  docker exec from running containers
+function fdosh() {
+    local container_name
+    container_name=$(docker ps --format {{.Names}} | fzf)
+    docker exec -e COLUMNS="`tput cols`" -e LINES="`tput lines`" -ti "$container_name" /bin/sh
+}
+
 #  docker kill
 function fdokill() {
     docker rm -f -v $(docker ps -a --format {{.Names}} | fzf -m )
