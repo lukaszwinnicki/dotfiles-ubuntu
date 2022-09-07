@@ -65,3 +65,25 @@ function fmake() {
     subject=$(egrep '^[a-zA-Z0-9_\-]+:{1}' Makefile | cut -d ':' -f 1 | fzf)
     make "$subject"
 }
+
+# k8s
+function fkubex() {
+    local pod_name
+    pod_name=$(kubectl get pods --no-headers -o custom-columns=":metadata.name" | fzf)
+    kubectl exec -ti "$pod_name" -- bash
+}
+
+function fkubexsh() {
+    local pod_name
+    pod_name=$(kubectl get pods --no-headers -o custom-columns=":metadata.name" | fzf)
+    kubectl exec -ti "$pod_name" -- /bin/sh
+}
+
+function kube_port_forward () {
+    namespace=$1
+    deployment_name=$2
+    port_mapping=$3
+    cmd="kubectl port-forward --namespace ${namespace} deployment/${deployment_name} ${port_mapping} &"
+    echo ${cmd}
+    eval ${cmd}
+}
