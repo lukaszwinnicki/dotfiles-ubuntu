@@ -45,7 +45,9 @@ function fcall() {
 function fdoex() {
     local container_name
     container_name=$(docker ps --format {{.Names}} | fzf)
-    docker exec -ti "$container_name" bash
+    cmd="docker exec -ti \"${container_name}\" bash"
+    echo ${cmd}
+    eval ${cmd}
 }
 
 #  docker exec from running containers
