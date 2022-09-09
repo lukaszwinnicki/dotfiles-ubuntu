@@ -65,7 +65,7 @@ function fdokill() {
 function fdormi() {
     local image
     local image_id
-    image=$(docker images | fzf)
+    image=$(docker images | grep -v REPOSITORY | fzf)
     image_id=$(echo $image | awk '{print $3}')
     cmd="docker rmi -f ${image_id}"
     echo ${cmd}
