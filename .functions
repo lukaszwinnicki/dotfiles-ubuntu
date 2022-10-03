@@ -111,3 +111,8 @@ function kube_port_forward () {
     echo ${cmd}
     eval ${cmd}
 }
+
+function alert() {
+    msg=$1
+    zenity --info --text "$msg"
+}
