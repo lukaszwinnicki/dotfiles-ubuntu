@@ -76,8 +76,10 @@ function fdormim() {
     local images
     local images_ids
     images=$(docker images | grep -v REPOSITORY | fzf -m)
-    images_ids=$(echo $images | awk '{print $3}')
-    for image_id in $images_ids; do
+    images_ids_in_one_line=$(echo $images | awk '{print $3}')
+    images_ids=(${(f)images_ids_in_one_line})
+    #for image_id_raw in $images_ids; do
+    for image_id in "${images_ids[@]}"; do
         cmd="docker rmi -f ${image_id}"
         echo ${cmd}
         eval ${cmd}
