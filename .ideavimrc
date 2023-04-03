@@ -8,5 +8,7 @@ set multiple-cursors
 
 set incsearch
 
+set relativenumber number
+
 " jk is escape
 inoremap jk <esc>
