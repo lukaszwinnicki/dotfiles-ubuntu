@@ -1,0 +1,23 @@
+[[snippets]]
+  description = "find file by exact name"
+  command = "find ./ -name <file-name>"
+  tag = ["find"]
+  output = ""
+
+[[snippets]]
+  description = "mitmproxy - proxy traffic to a directory"
+  command = "mitmproxy --listen-port <listen-port> --map-local='|~m GET|<proxy-from>|<to-dir-or-file>'"
+  tag = ["mitmproxy"]
+  output = ""
+
+[[snippets]]
+  description = "mitmproxy - listen traffic"
+  command = "mitmproxy --mode reverse:<addr> -p <listen-on-port>"
+  tag = ["mitmproxy"]
+  output = ""
+
+[[snippets]]
+  description = "find process listenning on port"
+  command = "sudo netstat -tunlp | grep \":<port>\""
+  tag = ["network"]
+  output = ""
