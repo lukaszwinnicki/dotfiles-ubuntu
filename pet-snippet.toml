@@ -21,3 +21,9 @@
   command = "sudo netstat -tunlp | grep \":<port>\""
   tag = ["network"]
   output = ""
+
+[[snippets]]
+  description = "check weather"
+  command = "curl wttr.in/<city>"
+  tag = ["weather"]
+  output = ""
