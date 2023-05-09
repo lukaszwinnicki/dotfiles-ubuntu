@@ -1,14 +1,29 @@
 set hlsearch
-
 set cursorline
-
 set surround
-
 set multiple-cursors
-
 set incsearch
-
+set ideamarks
+set ignorecase
 set relativenumber number
 
 " jk is escape
 inoremap jk <esc>
+
+let mapleader = ","
+set NERDTree
+set easymotion
+set commentary
+
+" NERDTree, Use F3 for toggle NERDTree
+" let g:NERDTree="<F3>"
+" nmap <silent> <F3> :NERDTree<CR>
+"nmap <F3> :NERDTree<CR>
+" sethandler <C-Z> a:vim
+nmap <leader>ne :NERDTreeFind<cr>
+
+map <leader>r <Action>(RenameElement)
+map <leader>z <Action>(ToggleDistractionFreeMode)
+map <leader>o <Action>(FileStructurePopup)
+map <leader>p <Action>(PinActiveTabToggle)
+map <leader>b <Action>(ShowBookmarks)
