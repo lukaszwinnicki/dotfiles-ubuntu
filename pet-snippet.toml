@@ -1,7 +1,13 @@
 [[snippets]]
   description = "find file by exact name"
   command = "find ./ -name <file-name>"
-  tag = ["find"]
+  tag = ["find", "files"]
+  output = ""
+
+[[snippets]]
+  description = "find files open by a process"
+  command = "lsof -f <pid>"
+  tag = ["files", "process"]
   output = ""
 
 [[snippets]]
@@ -26,4 +32,16 @@
   description = "check weather"
   command = "curl wttr.in/<city>"
   tag = ["weather"]
+  output = ""
+
+[[snippets]]
+  description = "python - create virtual environment"
+  command = "pyenv virtualenv <python-version> <project-name>"
+  tag = ["python", "pyenv"]
+  output = ""
+
+[[snippets]]
+  description = "python - activate virtual environment"
+  command = "pyenv activate <project-name>"
+  tag = ["python", "pyenv"]
   output = ""
