@@ -92,6 +92,13 @@ function fmake() {
     make "$subject"
 }
 
+# git
+function fgcheckout() {
+    local branch_name
+    branch_name=$(git branch | awk '{print $1}' | fzf)
+    git checkout "$branch_name"
+}
+
 # k8s
 function fkubex() {
     local pod_name
