@@ -27,3 +27,6 @@ map <leader>z <Action>(ToggleDistractionFreeMode)
 map <leader>o <Action>(FileStructurePopup)
 map <leader>p <Action>(PinActiveTabToggle)
 map <leader>b <Action>(ShowBookmarks)
+
+map <C-W>q <Action>(CloseEditorsGroup)
+
