@@ -14,6 +14,7 @@ let mapleader = ","
 set NERDTree
 set easymotion
 set commentary
+set sneak
 
 " NERDTree, Use F3 for toggle NERDTree
 " let g:NERDTree="<F3>"
@@ -30,3 +31,5 @@ map <leader>b <Action>(ShowBookmarks)
 
 map <C-W>q <Action>(CloseEditorsGroup)
 
+set highlightedyank
+let g:highlightedyank_highlight_duration = "1500"
