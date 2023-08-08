@@ -23,11 +23,13 @@ set sneak
 " sethandler <C-Z> a:vim
 nmap <leader>ne :NERDTreeFind<cr>
 
-map <leader>r <Action>(RenameElement)
-map <leader>z <Action>(ToggleDistractionFreeMode)
+map <leader>b <Action>(ShowBookmarks)
+map <leader>db <Action>(ActivateDatabaseToolWindow)
+map <leader>h <Action>(HideAllWindows)
 map <leader>o <Action>(FileStructurePopup)
 map <leader>p <Action>(PinActiveTabToggle)
-map <leader>b <Action>(ShowBookmarks)
+map <leader>r <Action>(RenameElement)
+map <leader>z <Action>(ToggleDistractionFreeMode)
 
 map <C-W>q <Action>(CloseEditorsGroup)
 
