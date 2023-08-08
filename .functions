@@ -21,12 +21,6 @@ function fkill() {
   fi
 }
 
-function fd() {
-  local dir
-  dir=$(find ${1:-.} -maxdepth 1 -mindepth 1 -type d | fzf)
-  cd "$dir"
-}
-
 # fdd - cd to selected directory
 function fdd() {
   local dir
