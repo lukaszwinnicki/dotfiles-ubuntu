@@ -24,6 +24,7 @@ set sneak
 nmap <leader>ne :NERDTreeFind<cr>
 
 map <leader>b <Action>(ShowBookmarks)
+map <leader>cp <Action>(CloseAllUnpinnedEditors)
 map <leader>db <Action>(ActivateDatabaseToolWindow)
 map <leader>h <Action>(HideAllWindows)
 map <leader>o <Action>(FileStructurePopup)
@@ -31,7 +32,7 @@ map <leader>p <Action>(PinActiveTabToggle)
 map <leader>r <Action>(RenameElement)
 map <leader>z <Action>(ToggleDistractionFreeMode)
 
-map <C-W>q <Action>(CloseEditorsGroup)
+map <C-W>q <Action>(CloseAllEditors)
 
 set highlightedyank
 let g:highlightedyank_highlight_duration = "1500"
