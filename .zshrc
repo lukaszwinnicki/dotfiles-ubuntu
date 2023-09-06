@@ -51,7 +51,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker history web-search z fzf kubectl)
+plugins=(git docker history z fzf kubectl fd zsh-vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.bash_profile
