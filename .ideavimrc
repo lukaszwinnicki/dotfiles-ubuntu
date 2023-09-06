@@ -23,13 +23,22 @@ set sneak
 " sethandler <C-Z> a:vim
 nmap <leader>ne :NERDTreeFind<cr>
 
-map <leader>b <Action>(ShowBookmarks)
+" to find action name run 'track action Ids'
+map <leader>bs <Action>(ShowBookmarks)
+map <leader>bt <Action>(ToggleBookmark)
+map <leader>ca <Action>(CloseAllEditors)
 map <leader>cp <Action>(CloseAllUnpinnedEditors)
 map <leader>db <Action>(ActivateDatabaseToolWindow)
-map <leader>h <Action>(HideAllWindows)
+map <leader>fu <Action>(FindUsages)
+map <leader>gmu <Action>(MethodUp)
+map <leader>gmd <Action>(MethodDown)
+map <leader>ha <Action>(HideAllWindows)
+map <leader>hc <Action>(HideActiveWindow)
 map <leader>o <Action>(FileStructurePopup)
 map <leader>p <Action>(PinActiveTabToggle)
-map <leader>r <Action>(RenameElement)
+map <leader>re <Action>(RenameElement)
+map <leader>rf <Action>(RenameFile)
+map <leader>scr <Action>(NewScratchFile)
 map <leader>z <Action>(ToggleDistractionFreeMode)
 
 map <C-W>q <Action>(CloseAllEditors)
