@@ -1,5 +1,5 @@
 set hlsearch
-set cursorline
+"set cursorline
 set surround
 set multiple-cursors
 set incsearch
@@ -15,6 +15,7 @@ set NERDTree
 set easymotion
 set commentary
 set sneak
+set clipboard+=unnamed
 
 " NERDTree, Use F3 for toggle NERDTree
 " let g:NERDTree="<F3>"
@@ -30,15 +31,17 @@ map <leader>ca <Action>(CloseAllEditors)
 map <leader>cp <Action>(CloseAllUnpinnedEditors)
 map <leader>db <Action>(ActivateDatabaseToolWindow)
 map <leader>fu <Action>(FindUsages)
+map <leader>gi <Action>(GotoImplementation)
 map <leader>gmu <Action>(MethodUp)
 map <leader>gmd <Action>(MethodDown)
 map <leader>ha <Action>(HideAllWindows)
 map <leader>hc <Action>(HideActiveWindow)
-map <leader>o <Action>(FileStructurePopup)
+map <leader>os <Action>(FileStructurePopup)
 map <leader>p <Action>(PinActiveTabToggle)
 map <leader>re <Action>(RenameElement)
 map <leader>rf <Action>(RenameFile)
 map <leader>scr <Action>(NewScratchFile)
+map <leader>sht <Action>(ActivateTODOToolWindow)
 map <leader>z <Action>(ToggleDistractionFreeMode)
 
 map <C-W>q <Action>(CloseAllEditors)
