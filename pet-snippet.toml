@@ -57,3 +57,15 @@
   command = "docker image prune"
   tag = ["docker"]
   output = ""
+
+[[snippets]]
+  description = "copy local file to the docker container"
+  command = "docker cp <source_file> <container_name>:<destination>"
+  tag = ["docker"]
+  output = ""
+
+[[snippets]]
+  description = "Copy local file to a running image by docker compose"
+  command = "docker compose cp <source_file> <container_name>:<destination>"
+  tag = ["docker-compose"]
+  output = ""
