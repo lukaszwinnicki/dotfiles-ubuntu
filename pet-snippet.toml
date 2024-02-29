@@ -45,3 +45,15 @@
   command = "pyenv activate <project-name>"
   tag = ["python", "pyenv"]
   output = ""
+
+[[snippets]]
+  description = "Show docker disk usage"
+  command = "docker system df"
+  tag = ["docker"]
+  output = ""
+
+[[snippets]]
+  description = "Remove unusek docker images"
+  command = "docker image prune"
+  tag = ["docker"]
+  output = ""
