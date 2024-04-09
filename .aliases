@@ -62,3 +62,6 @@ alias docker-compose="docker compose"
 
 
 alias t="tasks"
+
+# weather
+alias weather="curl wttr.in/warsaw"
