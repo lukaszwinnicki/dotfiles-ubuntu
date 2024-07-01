@@ -69,3 +69,15 @@
   command = "docker compose cp <source_file> <container_name>:<destination>"
   tag = ["docker-compose"]
   output = ""
+
+[[snippets]]
+  description = "get directory size"
+  command = "du -sh <directory>"
+  tag = ["files"]
+  output = ""
+
+[[snippets]]
+  description = "install deb package"
+  command = "sudo dpkg -i <file_path>"
+  tag = ["install"]
+  output = ""
