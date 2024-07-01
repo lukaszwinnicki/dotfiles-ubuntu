@@ -15,7 +15,8 @@ set NERDTree
 set easymotion
 set commentary
 set sneak
-set clipboard+=unnamed
+" set clipboard+=unnamed
+set clipboard+=unnamedplus
 
 " NERDTree, Use F3 for toggle NERDTree
 " let g:NERDTree="<F3>"
@@ -30,6 +31,8 @@ map <leader>bt <Action>(ToggleBookmark)
 map <leader>ca <Action>(CloseAllEditors)
 map <leader>cp <Action>(CloseAllUnpinnedEditors)
 map <leader>db <Action>(ActivateDatabaseToolWindow)
+map <leader>e <Plug>(easymotion-f)
+map <leader>f <Plug>(easymotion-s)
 map <leader>fu <Action>(FindUsages)
 map <leader>gi <Action>(GotoImplementation)
 map <leader>gmu <Action>(MethodUp)
@@ -42,6 +45,7 @@ map <leader>re <Action>(RenameElement)
 map <leader>rf <Action>(RenameFile)
 map <leader>vd <Action>(ToggleDistractionFreeMode)
 map <leader>qc <Action>(ActivateAIAssistantToolWindow)
+map <leader>qg <Action>(ActivateGitHubCopilotChatToolWindow)
 map <leader>qd <Action>(ActivateDatabaseToolWindow)
 map <leader>scr <Action>(NewScratchFile)
 map <leader>sht <Action>(ActivateTODOToolWindow)
