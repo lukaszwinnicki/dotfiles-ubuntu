@@ -63,5 +63,7 @@ alias docker-compose="docker compose"
 
 alias t="tasks"
 
+alias n="nvim"
+
 # weather
 alias weather="curl wttr.in/warsaw"
