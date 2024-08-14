@@ -20,4 +20,14 @@ done
 mkdir -p ~/.config/alacritty
 ln -s -f $dir/alacritty.toml ~/.config/alacritty/alacritty.toml
 
+# smug config
+mkdir -p ~/.config/smug
+for file in $dir/smug/*; do
+	if [ -f $file ]; then
+		echo "Creating symlink to $file in smug dir."
+		ln -s -f $file ~/.config/smug
+	fi
+done
+ln
+
 source ~/.bash_profile

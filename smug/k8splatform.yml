@@ -1,0 +1,17 @@
+session: k8splatform
+
+root: ~/srv/golang/src/gitlab.com/refurbed/engineering/platform
+env: {}
+before_start:
+  - kubectl ctx refb-production
+stop:
+  - kubectl ctx refb-staging-qa
+windows:
+  - name: main
+    layout: main-horizontal
+    commands:
+      - k9s
+    panes:
+      - type: vertical
+        commands:
+          - stern aogen

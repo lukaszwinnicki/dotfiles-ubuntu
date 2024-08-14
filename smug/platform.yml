@@ -1,0 +1,15 @@
+session: platform
+
+root: ~/srv/golang/src/gitlab.com/refurbed/engineering/platform
+env: {}
+before_start: []
+stop: []
+windows:
+  - name: main
+    commands:
+      - nvim
+  - name: proddb
+    manual: true
+    root: ~/srv/golang/src/gitlab.com/refurbed/lukasz_winnicki/prod-db-tests
+    commands:
+      - bat Makefile
