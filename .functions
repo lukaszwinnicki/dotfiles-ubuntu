@@ -124,3 +124,9 @@ function pet_prev() {
   PREV=$(fc -lrn | head -n 1)
   sh -c "pet new `printf %q "$PREV"` -t"
 }
+
+# refb specific
+function platform() {
+  smug platform
+  tmux switch -t platform
+}
