@@ -1,0 +1,3 @@
+
+# swap escape with capslock
+setxkbmap -option caps:swapescape
