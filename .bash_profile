@@ -3,7 +3,7 @@ source ~/.aliases
 source ~/.functions
 source ~/.paths
 source ~/.exports
-source ~/.setttings
+source ~/.settings
 source ~/.custom_exports
 
 #if command -v tmux>/dev/null; then
