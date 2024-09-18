@@ -1,7 +1,7 @@
 ###### Variables
 
 dir=~/dotfiles-ubuntu # dotfiles directory
-files=".bash_profile .vimrc .ideavimrc .functions .wezterm.lua .paths .exports .settings .tmux.conf .zshrc z.sh"
+files=".bash_profile .vimrc .ideavimrc .functions .paths .exports .settings .tmux.conf .zshrc z.sh"
 
 ##########
 
